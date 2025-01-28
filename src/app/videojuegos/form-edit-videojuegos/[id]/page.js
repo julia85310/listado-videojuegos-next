@@ -3,7 +3,7 @@ import {use, useState, useEffect} from 'react';
 import { permanentRedirect, redirect  } from 'next/navigation'
 export default function AddVideojuegoPage({params}){
     const [formData, setFormData] = useState({});
-    const [videojuego, setVideojuego] = useState({});
+    const [videojuego, setVideojuego] = useState({completado: false});
     const {id} = use(params);
     useEffect(() => {
         fetchData();
